@@ -45,6 +45,9 @@ import FingerprintJS from '@fingerprintjs/fingerprintjs'
 // Start loading FingerprintJS here
 ```
 
+If you face a TypeScript error that occurs in a FingerprintJS file,
+see the [TypeScript support guide](typescript_support.md).
+
 ### CommonJS
 
 ```bash
@@ -81,14 +84,14 @@ Result object fields:
     Each value is an object like `{ value: any, duration: number }` in case of success
     and `{ error: object, duration: number }` in case of an unexpected error during getting the component.
 - `version` The fingerprinting algorithm version which is equal to the library version.
-    See [the version policy section](#version-policy) for more details.
+    See [the version policy guide](version_policy.md) for more details.
 
-See the [extending guide](docs/extending.md) to learn how to remove and add entropy components.
+See the [extending guide](extending.md) to learn how to remove and add entropy components.
 
 #### `FingerprintJS.hashComponents(components: object): string`
 
 Converts a dictionary of components (described above) into a short hash string a.k.a. a visitor identifier.
-Designed for [extending the library](docs/extending.md) with your own components.
+Designed for [extending the library](extending.md) with your own components.
 
 #### `FingerprintJS.componentsToDebugString(components: object): string`
 
